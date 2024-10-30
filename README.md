@@ -7,7 +7,7 @@ Co-Instructor: Wentao Zhan
 
 Overview of the folders:
 
-slides: Course outline andlecture slides\
+slides: Course outline and lecture slides\
 code: All code used to obtain and process data, create figures used in the slides\
 demo_code: Code used to demonstrate the software during the course\
 data: All data files used for the slides and live demo
