@@ -17,7 +17,7 @@ title: Geospatial Short Course (SC06)
 tagline: SC06 IBC2024
 description: Statistical and Machine Learning for Big Geospatial Data.
 author: Abhirup Datta
-baseurl: '/Test' # the subpath of your site, e.g. /blog
+baseurl: '/geospatial_stats_ML_short_course_2024' # the subpath of your site, e.g. /blog
 url: 'https://abhirupdatta.github.io' # the base hostname & protocol for your site, e.g. http://example.com
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE"]
 
