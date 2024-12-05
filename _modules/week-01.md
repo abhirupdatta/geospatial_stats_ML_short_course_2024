@@ -1,23 +1,26 @@
 ---
-title: Introduction to Java
+title: Dec 8th
 ---
 
-Sep 28
-: [Java & Git](#)
-  : [1.1](#)
+8:00 - 8:45
+: [Introduction to geostatistics and spatial models](#)
+  : [Slides](https://wentaozhan1998.github.io/Test/slides/Lec_1_Intro.pdf)
 
-Sep 29
-: **Section**{: .label .label-purple }[Intro to Java](#)
-  : [Solution](#)
+8:45 - 9:30
+: [Random forests for geospatial data](#)
+  : [Slides](https://wentaozhan1998.github.io/Test/slides//Lec_2_rf.pdf)
 
-Sep 30
-: [Variables & Objects](#)
-  : [1.2](#), [2.1](#)
+9:30 - 10:00
+: [Software demonstration 1](#)
+  : [Slides](https://wentaozhan1998.github.io/Test/slides/Lec_2_rf.pdf)
 
-Oct 1
-: **Lab**{: .label .label-purple } [Intro to Java](#)
+10:00 - 10:30
+: Break
 
-Oct 2
-: [Tracing, IntLists, & Recursion](#)
-  : [2.1](#)
-: **HW 1 due**{: .label .label-red }
+10:30 - 11:30
+: [Neural networks for geospatial data](#)
+  : [Slides](https://wentaozhan1998.github.io/Test/slides/Lec_2_rf.pdf)
+
+11:30 - 12:00
+: [Software demonstration 2](#)
+  : [Slides](https://wentaozhan1998.github.io/Test/slides/Lec_4_geospaNN.pdf)

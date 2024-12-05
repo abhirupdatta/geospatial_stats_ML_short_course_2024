@@ -13,12 +13,12 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Just the Class
-tagline: A Jekyll template for course websites
-description: A modern, highly customizable, responsive Jekyll template for course websites
-author: Kevin Lin
-baseurl: '/geospatial-stats-ML-IBC-2024' # the subpath of your site, e.g. /blog
-url: 'https://wentaozhan1998.github.io' # the base hostname & protocol for your site, e.g. http://example.com
+title: Geospatial Short Course (SC06)
+tagline: SC06 IBC2024
+description: Statistical and Machine Learning for Big Geospatial Data.
+author: Abhirup Datta
+baseurl: '/Test' # the subpath of your site, e.g. /blog
+url: 'https://abhirupdatta.github.io' # the base hostname & protocol for your site, e.g. http://example.com
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE"]
 
 # Theme settings
