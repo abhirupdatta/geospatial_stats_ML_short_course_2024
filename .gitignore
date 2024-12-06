@@ -7,3 +7,6 @@
 # ipynb history
 **/.ipynb_checkpoints/
 .idea/
+
+# pycache
+**/.__pycache__/
