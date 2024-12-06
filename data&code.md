@@ -3,6 +3,15 @@ layout: page
 title: Materials
 description: >-
     Materials for the course
+header-includes:
+  - \usepackage{xcolor}
+  - \hypersetup{
+      colorlinks=true,
+      linkcolor=blue,      % Color of internal links
+      filecolor=magenta,   % Color of file links
+      urlcolor=cyan,       % Color of external links
+      citecolor=green      % Color of citation links
+    }
 ---
 
 # Lecture slides
