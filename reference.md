@@ -12,6 +12,8 @@ description: >-
 
 ## Main References
 
+**Textbook** Banerjee, S., Carlin, B. P., & Gelfand, A. E. (2003). *Hierarchical modeling and analysis for spatial data*. Chapman and Hall/CRC.
+
 **Nearest Neighbor Gaussian Process (NNGP)**: Datta, A., Banerjee, S., Finley, A. O., & Gelfand, A. E. (2016). Hierarchical nearest-neighbor Gaussian process models for large geostatistical datasets. *Journal of the American Statistical Association, 111*(514), 800-812.
 
 **BRISC paper**: Saha, A., & Datta, A. (2018). BRISC: bootstrap for rapid inference on spatial covariances. *Stat*, e184, DOI: 10.1002/sta4.184.
@@ -30,7 +32,7 @@ description: >-
 
 ## Other References
 
-1. Banerjee, S., Carlin, B. P., & Gelfand, A. E. (2003). *Hierarchical modeling and analysis for spatial data*. Chapman and Hall/CRC.
+1. 
 
 2. Cressie, N., & Wikle, C. K. (2011). *Statistics for spatio-temporal data*. John Wiley & Sons.
 
