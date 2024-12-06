@@ -7,8 +7,7 @@ seo:
   name: Just the Class
 ---
 
-# Statistical and Machine Learning 
-# for Geospatal Big Data
+## **Statistical and Machine Learning for Geospatal Big Data**
 {:.no_toc}
 
 **International Biometric Society Conference, Atlanta, GA, 2024**
