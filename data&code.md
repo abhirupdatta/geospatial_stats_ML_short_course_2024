@@ -12,11 +12,11 @@ description: >-
 
 [Random forests for geospatial data](https://abhirupdatta.github.io/geospatial_stats_ML_short_course_2024/slides//Lec_2_rf.pdf)
 
-[Software demonstration 1](https://abhirupdatta.github.io/geospatial_stats_ML_short_course_2024/slides/Lec_2_rf.pdf)
+[RandomForestGLS demonstration](https://abhirupdatta.github.io/geospatial_stats_ML_short_course_2024/slides/Lec_2_rf.pdf)
 
 [Neural networks for geospatial data](https://abhirupdatta.github.io/geospatial_stats_ML_short_course_2024/slides/Lec_2_rf.pdf)
 
-[Software demonstration 2](https://abhirupdatta.github.io/geospatial_stats_ML_short_course_2024/slides/Lec_3_geospaNN.pdf)
+[GeospaNN demonstration](https://abhirupdatta.github.io/geospatial_stats_ML_short_course_2024/slides/Lec_3_geospaNN.pdf)
 
 
 # Data & Code Availability

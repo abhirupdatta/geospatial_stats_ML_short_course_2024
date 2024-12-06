@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Geospatial Short Course (SC06)
+title: Course (SC06)
 tagline: SC06 IBC2024
 description: Statistical and Machine Learning for Big Geospatial Data.
 author: Abhirup Datta
