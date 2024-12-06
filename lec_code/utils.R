@@ -49,3 +49,5 @@ normalize <- function(x) {
 rmse = function(x,y){
   sqrt(mean((x-y)^2))
 }
+
+mymean=function(x) mean(x,na.rm=T)
