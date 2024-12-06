@@ -1,12 +1,19 @@
 ---
-layout: page
-title: About
-description: >-
-    Course information.
+layout: home
+title: Geospatial Short Course
+nav_exclude: true
+permalink: /:path/
+seo:
+  type: Course
+  name: Just the Class
 ---
 
 # Course Information
 {:.no_toc}
+
+[**Short course on Statistical and Machine Learning for Geospatal Big Data**]((https://abhirupdatta.github.io/geospatial_stats_ML_short_course_2024/Course outline.pdf)) 
+
+**International Biometric Society Conference, Atlanta, GA, 2024**
 
 ---
 
@@ -43,6 +50,9 @@ Johns Hopkins University
 
 
 ## Resources
+
+### GitHub
+- [https://github.com/abhirupdatta/geospatial_stats_ML_short_course_2024](https://github.com/abhirupdatta/geospatial_stats_ML_short_course_2024)
 
 ### Statistical Softwares:
 - [BRISC (R)](https://cran.r-project.org/web/packages/BRISC/index.html)

@@ -1,11 +1,7 @@
 ---
-layout: home
+layout: page
 title: Geospatial Short Course
 nav_exclude: true
-permalink: /:path/
-seo:
-  type: Course
-  name: Just the Class
 ---
 
 # Stistial and Machine Learning for Big Geospatial Datta
