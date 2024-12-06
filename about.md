@@ -1,14 +1,18 @@
 ---
-layout: page
+layout: home
 title: Course information
+permalink: /:path/
+seo:
+  type: Course
+  name: Just the Class
 ---
 
-# Course Information
+# Statistical and Machine Learning for Geospatal Big Data
 {:.no_toc}
 
-[**Short course on Statistical and Machine Learning for Geospatal Big Data**](https://abhirupdatta.github.io/geospatial_stats_ML_short_course_2024/Course outline.pdf)
-
 **International Biometric Society Conference, Atlanta, GA, 2024**
+
+[**Poster**](https://abhirupdatta.github.io/geospatial_stats_ML_short_course_2024/Course outline.pdf)
 
 ---
 
