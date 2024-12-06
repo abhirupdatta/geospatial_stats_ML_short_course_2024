@@ -26,9 +26,9 @@ description: >-
 
 ## Demo code:
 These are the live code used in the lectures.
-### Software demonstration 1:
+### RandomForestGLS demonstration:
 
-### Software demonstration 2:
+### GeospaNN demonstration:
 - Basic Features [code](https://abhirupdatta.github.io/Test/demo_code/Example_utils.ipynb)
 - Architecture Design [code](https://abhirupdatta.github.io/Test/demo_code/Example_architecture.ipynb)
 - Compare with GAM [code](https://abhirupdatta.github.io/Test/demo_code/Example_GAM.ipynb)
