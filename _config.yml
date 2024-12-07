@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Course (SC06)
+title: Geospatial Course
 tagline: SC06 IBC2024
 description: Statistical and Machine Learning for Big Geospatial Data.
 author: Abhirup Datta
@@ -29,7 +29,7 @@ heading_anchors: true
 permalink: pretty
 aux_links:
   Abhirup Datta:
-    - 'https://abhirupdatta.github.io'
+    - 'https://abhidatta.com/'
   Wentao Zhan:
     - 'https://wentaozhan1998.github.io'
 footer_content:

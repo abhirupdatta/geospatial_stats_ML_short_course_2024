@@ -3,8 +3,8 @@ title: "Dependency installation"
 layout: page
 description: Installation instruction.
 output: pdf_document
+urlcolor: blue
 ---
-
 # Installation and Setup Instructions
 
 This guide outlines the steps to install and set up the necessary tools and packages for the short course, including R, Python, and `rpy2` for connecting Python to R.

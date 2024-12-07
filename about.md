@@ -18,11 +18,13 @@ seo:
 
 ### Instructor
 **Abhirup Datta**, PhD  
+abhidatta@jhu.edu
 Department of Biostatistics  
 Johns Hopkins University
 
 ### Co-Instructor
 **Wentao Zhan**, PhD Candidate  
+wzhan3@jhu.edu
 Department of Biostatistics  
 Johns Hopkins University
 
