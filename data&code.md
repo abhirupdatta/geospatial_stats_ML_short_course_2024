@@ -40,6 +40,8 @@ These are the live code used in the lectures.
 
 ### Lecture 2 RandomForestGLS demonstration:
 
+- RandomForestsGLS [code](https://abhirupdatta.github.io/geospatial_stats_ML_short_course_2024/demo_code/randomForestsGLS.Rmd)
+
 ### Lecture 4 GeospaNN demonstration:
 
 -   Basic Features [code](https://abhirupdatta.github.io/geospatial_stats_ML_short_course_2024/demo_code/Example_utils.ipynb)

@@ -22,11 +22,11 @@ description: >-
 
 **RFGLS software paper**: Saha, A., Basu, S., & Datta, A. (2022). RandomForestsGLS: an r package for random forests for dependent data. *Journal of open source software, 7*(71)
 
-**RFGLS software**: [https://cran.r-project.org/web/packages/RandomForestsGLS/](https://cran.r-project.org/web/packages/RandomForestsGLS/)
+**RFGLS software**: [https://cran.r-project.org/web/packages/RandomForestsGLS/](https://cran.r-project.org/web/packages/RandomForestsGLS/){:target="_blank"}
 
 **NN-GLS paper**: Zhan, W., & Datta, A. (2024). Neural networks for geospatial data. *Journal of the American Statistical Association*, (just-accepted), 1-21.
 
-**NN-GLS software**: [https://pypi.org/project/geospaNN/](https://pypi.org/project/geospaNN/)
+**NN-GLS software**: [https://pypi.org/project/geospaNN/](https://pypi.org/project/geospaNN/){:target="_blank"}
 
 
 
