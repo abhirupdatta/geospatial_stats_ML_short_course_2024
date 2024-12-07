@@ -20,19 +20,19 @@ header-includes:
 
 ------------------------------------------------------------------------
 
-[Lecture 1: Introduction to geostatistics and spatial models](https://abhirupdatta.github.io/geospatial_stats_ML_short_course_2024/slides/Lec_1_Intro.pdf)
+[Lecture 1: Introduction to geostatistics and spatial models](https://abhirupdatta.github.io/geospatial_stats_ML_short_course_2024/slides/Lec_1_Intro.pdf){:target="_blank"}
 
-[Lecture 2: Random forests for geospatial data and RandomForestGLS demonstration](https://abhirupdatta.github.io/geospatial_stats_ML_short_course_2024/slides//Lec_2_rf.pdf)
+[Lecture 2: Random forests for geospatial data and RandomForestGLS demonstration](https://abhirupdatta.github.io/geospatial_stats_ML_short_course_2024/slides//Lec_2_rf.pdf){:target="_blank"}
 
-[Lecture 3: Neural networks for geospatial data](https://abhirupdatta.github.io/geospatial_stats_ML_short_course_2024/slides/Lec_3_nn.pdf)
+[Lecture 3: Neural networks for geospatial data](https://abhirupdatta.github.io/geospatial_stats_ML_short_course_2024/slides/Lec_3_nn.pdf){:target="_blank"}
 
-[Lecture 4: GeospaNN demonstration](https://abhirupdatta.github.io/geospatial_stats_ML_short_course_2024/slides/Lec_4_geospaNN.pdf)
+[Lecture 4: GeospaNN demonstration](https://abhirupdatta.github.io/geospatial_stats_ML_short_course_2024/slides/Lec_4_geospaNN.pdf){:target="_blank"}
 
 # Data & Code Availability
 
 {:.no_toc}
 
-## **Please keep the same folder structure as in this [repository](https://github.com/abhirupdatta/geospatial_stats_ML_short_course_2024) to make sure the code works.**
+## **Please keep the same folder structure as in this [repository](https://github.com/abhirupdatta/geospatial_stats_ML_short_course_2024){:target="_blank"} to make sure the code works.**
 
 ## Demo code:
 
