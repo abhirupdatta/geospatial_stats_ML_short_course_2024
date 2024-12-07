@@ -10,3 +10,6 @@
 
 # pycache
 **/.__pycache__/
+
+# html file from RFGLS demo Rmd
+demo_code/randomForestsGLS_demo.nb.html
