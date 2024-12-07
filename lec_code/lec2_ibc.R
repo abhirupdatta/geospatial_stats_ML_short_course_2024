@@ -26,7 +26,7 @@ library(mvtnorm)
 library(parallel)
 library(tidyverse)
 library(scales)
-library(spatialRF). ## install spatialRF using this command remotes::install_github(repo = "blasbenito/spatialRF", ref = "main",force = TRUE,quiet = TRUE)
+library(spatialRF) ## install spatialRF using this command remotes::install_github(repo = "blasbenito/spatialRF", ref = "main",force = TRUE,quiet = TRUE)
 numCores <- detectCores()
 
 source("utils.R")
@@ -495,9 +495,6 @@ ggplot(plot_data, aes(x=Covariate, y=xval, color=Methods)) +
   scale_color_manual(values = c("#F8766D",  "#619CFF"))
 
 set.seed(1)
-#RFGLS_est <- RFGLS_estimate_spatial(coords, y, x, ntree = 50, cov.model = "exponential",nthsize = 20)
-# RFGLS_est <- RFGLS_estimate_spatial(coords, y, unname(matrix(round_to_quantile(x),ncol=1)), ntree = 50, cov.model = "exponential",
-#                                     nthsize = 20)
 RFGLS_est <- RFGLS_estimate_spatial(coords, y, round(x,1), ntree = 50, cov.model = "exponential",
                                     nthsize = 20,param_estimate=T)
 
@@ -509,9 +506,6 @@ rfgls.plot.data=data.frame(xval=rfgls_smoothed10,Methods="RFGLS: estimated pars"
 
 
 set.seed(1)
-#RFGLS_est <- RFGLS_estimate_spatial(coords, y, x, ntree = 50, cov.model = "exponential",nthsize = 20)
-# RFGLS_est <- RFGLS_estimate_spatial(coords, y, unname(matrix(round_to_quantile(x),ncol=1)), ntree = 50, cov.model = "exponential",
-#                                     nthsize = 20)
 RFGLS_est.true <- RFGLS_estimate_spatial(coords, y, round(x,1), ntree = 50, cov.model = "exponential",
   nthsize = 20,sigma.sq=sigma.sq,phi=phi,tau.sq=tau.sq)
 
@@ -523,9 +517,6 @@ rfgls.plot.data.true=data.frame(xval=rfgls_smoothed10.true,Methods="RFGLS: true 
 
 
 set.seed(1)
-#RFGLS_est <- RFGLS_estimate_spatial(coords, y, x, ntree = 50, cov.model = "exponential",nthsize = 20)
-# RFGLS_est <- RFGLS_estimate_spatial(coords, y, unname(matrix(round_to_quantile(x),ncol=1)), ntree = 50, cov.model = "exponential",
-#                                     nthsize = 20)
 RFGLS_est.largephi <- RFGLS_estimate_spatial(coords, y, round(x,1), ntree = 50, cov.model = "exponential",
   nthsize = 20,phi=200,sigma.sq=sigma.sq,tau.sq=tau.sq)
 
@@ -807,10 +798,7 @@ df.all$PM25_raw_fit_RFGLS2=RFGLS2_predict_temp_unknown$predicted
 plot(df.all$PM25_raw_fit_RFGLS,df.all$PM25_raw_fit_RFGLS2,xlab="RFGLS AR(1) fit",ylab="RFGLS AR(2) fit")
 abline(a=0,b=1,col="red")
 
-## fitting AR(1) timeseries data using spatial RFGLS
-  ## AR(1) time-series covariance == exponential GP covariance in 1 dimension
 
-## creating a normalized time variable, to be used as space
 df$normtime=(1:nrow(df))/24
 
 df.in=df[1:288,]

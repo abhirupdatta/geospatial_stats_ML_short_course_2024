@@ -7,3 +7,6 @@
 # ipynb history
 **/.ipynb_checkpoints/
 .idea/
+
+# Rmarkdown html files
+demo_code/randomForestsGLS_demo.nb.html
