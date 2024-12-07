@@ -15,7 +15,7 @@ This guide outlines the steps to install and set up the necessary tools and pack
 
 ### 1.1 Install Miniconda or Anaconda
 
-1.  Visit the [official Conda website](https://docs.conda.io/en/latest/miniconda.html).
+1.  Visit the [official Conda website](https://docs.conda.io/en/latest/miniconda.html){:target="_blank"}.
 2.  Download the installer for Miniconda (lightweight) or Anaconda (full distribution) appropriate for your operating system.
 3.  Follow the installation instructions for your operating system.
 
@@ -49,10 +49,10 @@ conda install r-base
 ```
 
 #### Option 2: Install R independently
-1.  Go to the [R Project website](https://cran.r-project.org/).
+1.  Go to the [R Project website](https://cran.r-project.org/){:target="_blank"}.
 2.  Download the appropriate version of R for your operating system (Windows, macOS, or Linux).
 3.  Follow the installation instructions to complete the setup.
-4. Since rpy2 is a dependency, please refer to rpy2 [official documentation](https://rpy2.github.io/doc/latest/html/index.html) in case any issue is raised.
+4. Since rpy2 is a dependency, please refer to rpy2 [official documentation](https://rpy2.github.io/doc/latest/html/index.html){:target="_blank"} in case any issue is raised.
 
 ### 3.2 Install required R package
 

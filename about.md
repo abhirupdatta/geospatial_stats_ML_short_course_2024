@@ -12,7 +12,7 @@ seo:
 
 **International Biometric Society Conference, Atlanta, GA, 2024**
 
-[**Poster**](https://abhirupdatta.github.io/geospatial_stats_ML_short_course_2024/Course outline.pdf)
+[**Poster**](https://abhirupdatta.github.io/geospatial_stats_ML_short_course_2024/Course outline.pdf){:target="_blank"}
 
 ---
 
@@ -53,22 +53,22 @@ Johns Hopkins University
 ## Resources
 
 ### GitHub
-- [https://github.com/abhirupdatta/geospatial_stats_ML_short_course_2024](https://github.com/abhirupdatta/geospatial_stats_ML_short_course_2024)
+- [https://github.com/abhirupdatta/geospatial_stats_ML_short_course_2024](https://github.com/abhirupdatta/geospatial_stats_ML_short_course_2024){:target="_blank"}
 
 ### Statistical Softwares:
-- [BRISC (R)](https://cran.r-project.org/web/packages/BRISC/index.html)
-- [spNNGP (R)](https://cran.r-project.org/web/packages/spNNGP/index.html)
-- [RandomForestsGLS (R)](https://cran.r-project.org/web/packages/RandomForestsGLS/index.html)
-- [GeospaNN (Python)](https://wentaozhan1998.github.io/geospaNN-doc/) 
+- [BRISC (R)](https://cran.r-project.org/web/packages/BRISC/index.html){:target="_blank"}
+- [spNNGP (R)](https://cran.r-project.org/web/packages/spNNGP/index.html){:target="_blank"}
+- [RandomForestsGLS (R)](https://cran.r-project.org/web/packages/RandomForestsGLS/index.html){:target="_blank"}
+- [GeospaNN (Python)](https://wentaozhan1998.github.io/geospaNN-doc/){:target="_blank"} 
 
 ### Other packages:
-- [geoR](https://cran.r-project.org/web/packages/geoR/index.html)
-- [geoPandas](https://geopandas.org/en/stable/)
+- [geoR](https://cran.r-project.org/web/packages/geoR/index.html){:target="_blank"}
+- [geoPandas](https://geopandas.org/en/stable/){:target="_blank"}
 
 ### Data Sources:
-- [NASA Giovanni Earth Data](https://giovanni.gsfc.nasa.gov/giovanni/)
-- [NASA Earth Observation](https://neo.gsfc.nasa.gov/.)
-- [NASA G-LiHT data](https://gliht.gsfc.nasa.gov)
+- [NASA Giovanni Earth Data](https://giovanni.gsfc.nasa.gov/giovanni/){:target="_blank"}
+- [NASA Earth Observation](https://neo.gsfc.nasa.gov/.){:target="_blank"}
+- [NASA G-LiHT data](https://gliht.gsfc.nasa.gov){:target="_blank"}
 
 
 
