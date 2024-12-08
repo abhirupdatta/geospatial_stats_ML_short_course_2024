@@ -405,6 +405,7 @@ df.all$PM25_raw_fit_RFGLS2=RFGLS2_predict_temp_unknown$predicted
 plot(df.all$PM25_raw_fit_RFGLS,df.all$PM25_raw_fit_RFGLS2,xlab="RFGLS AR(1) fit",ylab="RFGLS AR(2) fit")
 abline(a=0,b=1,col="red")
 
+### analyzing time-series data as spatial data using RFGLS
 
 df$normtime=(1:nrow(df))/24
 
