@@ -26,7 +26,7 @@ library(mvtnorm)
 library(parallel)
 library(tidyverse)
 library(scales)
-library(spatialRF)
+library(spatialRF) ## install spatialRF using this command remotes::install_github(repo = "blasbenito/spatialRF", ref = "main",force = TRUE,quiet = TRUE)
 numCores <- detectCores()
 
 source("utils.R")
@@ -192,10 +192,6 @@ rfgls.plot.data=data.frame(xval=rfgls_smoothed10,Methods="RFGLS",Covariate=Xtest
 
 all.plot_data=rbind(plot_data,rfgls.plot.data)
 
-ggplot(all.plot_data, aes(x=Covariate, y=xval, color=Methods)) +
-  geom_point() + labs( x = "x") + labs( y = "m(x)") +
-  theme(legend.title=element_blank(),text = element_text(size = 20)) 
-
 all_plot_data <- data.frame(lapply(all.plot_data %>%
   dplyr::filter(!(Methods=='iid')), function(x) {gsub("correlated", "RF", x)})) %>%
   mutate(xval=as.numeric(xval),Covariate=as.numeric(Covariate))
@@ -204,7 +200,6 @@ ggplot(all_plot_data,aes(x=Covariate, y=xval, color=Methods)) +
   geom_point() + labs( x = "x") + labs( y = "m(x)") +
   theme(legend.title=element_blank(),text = element_text(size = 20)) +
   scale_color_manual(values = c("#F8766D","maroon", "#619CFF"))
-
 
 df=data.frame(sx=coords[,1],sy=coords[,2],x=x,y=y,mu=10*sin(pi * x),error=y -10*sin(pi * x))
 myplot(df,"error",col.br2)
@@ -364,6 +359,28 @@ ggplot(all.plot_data, aes(x=Covariate, y=xval, color=Methods)) +
   theme(legend.title=element_blank(),text = element_text(size = 20)) +
   scale_color_manual(values = c("#F8766D","maroon", "#619CFF"))
 
+
+## centered estimates ##
+
+xval <- c(mu.gen(Xtest) -mean(mu.gen(Xtest)), rf_smoothed10 - mean(rf_smoothed10))
+xval_tag <- c(rep("Truth", length(10*sin(pi * Xtest))), 
+              rep("RF",length(rf_smoothed10)))
+
+plot_data <- as.data.frame(xval)
+plot_data$Methods <- xval_tag
+coval <- rep(Xtest,2)
+plot_data$Covariate <- coval
+
+rfgls.plot.data=data.frame(xval=rfgls_smoothed10 -mean(rfgls_smoothed10),Methods="RFGLS",Covariate=Xtest)  
+
+all.plot_data=rbind(plot_data,rfgls.plot.data)
+
+ggplot(all.plot_data, aes(x=Covariate, y=xval, color=Methods)) +
+  geom_point() + labs( x = "x") + labs( y = "m(x)") +
+  theme(legend.title=element_blank(),text = element_text(size = 20)) +
+  scale_color_manual(values = c("#F8766D","maroon", "#619CFF"))
+
+
 #### same example but sampled from a larger domain
 set.seed(5)
 n <- 500 ## mean shift example change sample size to 500
@@ -478,9 +495,6 @@ ggplot(plot_data, aes(x=Covariate, y=xval, color=Methods)) +
   scale_color_manual(values = c("#F8766D",  "#619CFF"))
 
 set.seed(1)
-#RFGLS_est <- RFGLS_estimate_spatial(coords, y, x, ntree = 50, cov.model = "exponential",nthsize = 20)
-# RFGLS_est <- RFGLS_estimate_spatial(coords, y, unname(matrix(round_to_quantile(x),ncol=1)), ntree = 50, cov.model = "exponential",
-#                                     nthsize = 20)
 RFGLS_est <- RFGLS_estimate_spatial(coords, y, round(x,1), ntree = 50, cov.model = "exponential",
                                     nthsize = 20,param_estimate=T)
 
@@ -492,9 +506,6 @@ rfgls.plot.data=data.frame(xval=rfgls_smoothed10,Methods="RFGLS: estimated pars"
 
 
 set.seed(1)
-#RFGLS_est <- RFGLS_estimate_spatial(coords, y, x, ntree = 50, cov.model = "exponential",nthsize = 20)
-# RFGLS_est <- RFGLS_estimate_spatial(coords, y, unname(matrix(round_to_quantile(x),ncol=1)), ntree = 50, cov.model = "exponential",
-#                                     nthsize = 20)
 RFGLS_est.true <- RFGLS_estimate_spatial(coords, y, round(x,1), ntree = 50, cov.model = "exponential",
   nthsize = 20,sigma.sq=sigma.sq,phi=phi,tau.sq=tau.sq)
 
@@ -506,9 +517,6 @@ rfgls.plot.data.true=data.frame(xval=rfgls_smoothed10.true,Methods="RFGLS: true 
 
 
 set.seed(1)
-#RFGLS_est <- RFGLS_estimate_spatial(coords, y, x, ntree = 50, cov.model = "exponential",nthsize = 20)
-# RFGLS_est <- RFGLS_estimate_spatial(coords, y, unname(matrix(round_to_quantile(x),ncol=1)), ntree = 50, cov.model = "exponential",
-#                                     nthsize = 20)
 RFGLS_est.largephi <- RFGLS_estimate_spatial(coords, y, round(x,1), ntree = 50, cov.model = "exponential",
   nthsize = 20,phi=200,sigma.sq=sigma.sq,tau.sq=tau.sq)
 
@@ -551,23 +559,15 @@ vario1raw <- variog(coords=unname(as.matrix(pl.df[,c("x","y")])), data=pl.df$ric
                     uvec=(seq(0, max.dist, length=bins)))
 plot(vario1raw,pch=16)
 
-# myplot(pl.df,"richness_species_vascular")
+
 
 pl.df=na.omit(pl.df) #%>% dplyr::filter(richness_species_vascular < 15000)
 pl.df=pl.df %>% mutate(richness_species_vascular=log(richness_species_vascular))
 distance_matrix = as.matrix(dist(pl.df[,c("x","y")]))
 
-set.seed(1)
-#index=sample(1:nrow(plant_richness_df),round(nrow(plant_richness_df)/5))
-# resample=sample(1:nrow(plant_richness_df),nrow(plant_richness_df))
-# 
-# indexlist=list()
-# indexlist[[1]]=resample[1:45]
-# indexlist[[2]]=resample[46:90]
-# indexlist[[3]]=resample[91:135]
-# indexlist[[4]]=resample[136:181]
-# indexlist[[5]]=resample[182:227]
+### test train split
 
+set.seed(1)
 high.temp=which(pl.df$climate_bio1_average>200)
 index=sample(high.temp,45)
 
@@ -586,13 +586,6 @@ plot(pl.df.in$climate_bio1_average,log(pl.df.in$richness_species_vascular),
 points(pl.df.out$climate_bio1_average,log(pl.df.out$richness_species_vascular),
      xlab="temp",ylab="log(richness)",col=hue_pal()(2)[1])
 legend("topleft",c("test","train"),pch=1,col=hue_pal()(2))
-
-## code for 5 fold cross-validation
-#rmse.gen=function(i){
-
-# print(i)
-#index=indexlist[[i]]
-
 
 ## linear model ##
 
@@ -701,7 +694,7 @@ spRF_predict <- predict(sprf_est, newdata=X)
 rmse(pl.df.out$richness_species_vascular,spRF_predict[index])
 
 ## Mean prediction error ##
-df1=data.frame(fold=1,Metric="RMSE",Method=c("LM","spLM","RF","RFGLS"),
+df1=data.frame(fold=1,Metric="mean",Method=c("LM","spLM","RF","RFGLS"),
            RMSE=round(c(rmse(pl.df.out$richness_species_vascular,lm_pred[index]),
                         rmse(pl.df.out$richness_species_vascular,br.mean.pred$prediction[index]),
                         rmse(pl.df.out$richness_species_vascular,RF_predict[index]),
@@ -709,7 +702,7 @@ df1=data.frame(fold=1,Metric="RMSE",Method=c("LM","spLM","RF","RFGLS"),
 
 
 ## Spatial prediction error ##
-df2=data.frame(fold=1,Metric="RMSPE",Method=c("LM","spLM","spLM2","RF","RFGLS","RFGLS2","RFloc","spRF"),
+df2=data.frame(fold=1,Metric="spatial",Method=c("LM","spLM","spLM2","RF","RFGLS","RFGLS2","RFloc","spRF"),
            RMSE=round(c(rmse(pl.df.out$richness_species_vascular,lm_pred[index]),
                   rmse(pl.df.out$richness_species_vascular,br.pred$prediction[index]),
                   rmse(pl.df.out$richness_species_vascular,br2.pred$prediction[index]),
@@ -721,15 +714,6 @@ df2=data.frame(fold=1,Metric="RMSPE",Method=c("LM","spLM","spLM2","RF","RFGLS","
 
 
 rbind(df1,df2)
-
-
-#}
-
-# all.results=Reduce('rbind',lapply(1:5,rmse.gen))
-# 
-# all.results %>% 
-#   group_by(Metric,Method) %>%
-#   summarize(mean.value=mean(RMSE),sd.value=sd(RMSE))
 
 ##### time-series example #####
 
@@ -758,18 +742,8 @@ df.all$lmfit=predict(l,newdata=df.all)
 
 p=pacf(df.all$PM25_raw-df.all$lmfit)
 
-#p=pacf(df.all$PM25_raw-df.all$lmfit)
-
 r=randomForest(PM25_raw ~ PM25_MDE, data=df.in)
 df.all$rffit=predict(r,newdata=df.all)
-
-#df$rffit=predict(r,newdata=df)
-
-# ggplot(df) + 
-#   geom_path(aes(x=LST,y=PM25_raw),col="red") +
-#   geom_path(aes(x=LST,y=PM25_MDE),col="blue") +
-#   geom_path(aes(x=LST,y=lmfit),col="green") +
-#   geom_path(aes(x=LST,y=rffit),col="cyan")
 
 y=df.in$PM25_raw
 x=1*unname(as.matrix(df.in[,c("PM25_MDE"),drop=F],ncol=1))
@@ -824,19 +798,7 @@ df.all$PM25_raw_fit_RFGLS2=RFGLS2_predict_temp_unknown$predicted
 plot(df.all$PM25_raw_fit_RFGLS,df.all$PM25_raw_fit_RFGLS2,xlab="RFGLS AR(1) fit",ylab="RFGLS AR(2) fit")
 abline(a=0,b=1,col="red")
 
-# ggplot(data=df.all %>% select(Time,PM25_MDE,PM25_raw,PM25_raw_fit_RFGLS,PM25_raw_fit_RFGLS2) %>%
-#          pivot_longer(-c(Time),names_to="Series")
-#        ,aes(x=Time,y=value,col=Series)) +
-#   geom_path() +
-#   theme(axis.text.x=element_text(angle=45,vjust = .5)) +
-#   xlab('Time') +
-#   ylab('PM25 in mu g m^-3') +
-#   scale_color_manual(values = c("#E76BF3","#619CFF","maroon","darkred"))
 
-## fitting AR(1) timeseries data using spatial RFGLS
-  ## AR(1) time-series covariance == exponential GP covariance in 1 dimension
-
-## creating a normalized time variable 
 df$normtime=(1:nrow(df))/24
 
 df.in=df[1:288,]

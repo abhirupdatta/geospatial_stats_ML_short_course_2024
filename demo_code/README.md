@@ -1,3 +1,8 @@
+---
+layout: page
+nav_exclude: true
+---
+
 # geospatial_stats_ML_short_course_2024
 
 Short course on Statistical and Machine Learning for Geospatal Big Data\
